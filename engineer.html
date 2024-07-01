@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroLearn - Electrical Engineering E-Learning</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #0066cc;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 2rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #e6f2ff;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        main {
+            max-width: 1200px;
+            margin: 6rem auto 2rem;
+            padding: 0 2rem;
+        }
+        section {
+            margin-bottom: 4rem;
+        }
+        h1, h2 {
+            color: #0066cc;
+        }
+        .hero {
+            background: linear-gradient(rgba(0, 102, 204, 0.8), rgba(0, 102, 204, 0.8)), url('https://source.unsplash.com/random/1600x900/?electrical-engineering') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 8rem 2rem;
+            margin-bottom: 4rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #ff9900;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #e68a00;
+        }
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .course-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            background-color: #0066cc;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ElectroLearn</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#electrotechnics">Electrotechnics</a></li>
+                <li><a href="#electronics">Electronics</a></li>
+                <li><a href="#automation">Industrial Automation</a></li>
+                <li><a href="#network">Network</a></li>
+                <li><a href="#domotics">Domotics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Welcome to ElectroLearn</h1>
+            <p>Empowering the next generation of electrical engineers with comprehensive e-learning resources</p>
+            <a href="#courses" class="cta-button">Explore Courses</a>
+        </section>
+
+        <section id="courses">
+            <h2>Our Courses</h2>
+            <div class="course-grid">
+                <div class="course-card" id="electrotechnics">
+                    <h3>Electrotechnics</h3>
+                    <p>Learn the fundamentals of electrical systems, power generation, and distribution.</p>
+                    <a href="#" class="cta-button">Learn More</a>
+                </div>
+                <div class="course-card" id="electronics">
+                    <h3>Electronics</h3>
+                    <p>Explore electronic circuits, components, and digital systems design.</p>
+                    <a href="#" class="cta-button">Learn More</a>
+                </div>
+                <div class="course-card" id="automation">
+                    <h3>Industrial Automation</h3>
+                    <p>Discover PLC programming, SCADA systems, and process control techniques.</p>
+                    <a href="#" class="cta-button">Learn More</a>
+                </div>
+                <div class="course-card" id="network">
+                    <h3>Network</h3>
+                    <p>Master computer networks, protocols, and cybersecurity fundamentals.</p>
+                    <a href="#" class="cta-button">Learn More</a>
+                </div>
+                <div class="course-card" id="domotics">
+                    <h3>Domotics</h3>
+                    <p>Learn about smart home technologies and home automation systems.</p>
+                    <a href="#" class="cta-button">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About ElectroLearn</h2>
+            <p>ElectroLearn is a comprehensive e-learning platform dedicated to electrical engineering and computer science education. Our courses are designed by industry experts and academics to provide you with the knowledge and skills needed to excel in the rapidly evolving field of electrical engineering.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ElectroLearn. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add more interactivity or functionality as needed
+    </script>
+</body>
+</html>
